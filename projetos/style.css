@@ -1,0 +1,41 @@
+*{margin: 0;padding: 0;}
+.center{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 9px 0;
+    text-align: center;
+    background: #069;    
+}
+
+header li{
+    display: inline-block;
+    margin:0 100px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+.conteudo{
+    height: 2000px;
+    background: green;
+}
+
+section.content {
+    margin-top: 40px;    
+}
+
+.rodape {    
+    height: 40px;
+    background: gold;
+    clear: both;
+}
