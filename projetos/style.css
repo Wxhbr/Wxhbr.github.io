@@ -5,7 +5,10 @@
     padding: 0 2%;
     box-sizing: border-box;
 }
-
+body {
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
 header{
     position: fixed;
     left: 0;
@@ -29,7 +32,19 @@ header a{
 .conteudo{
     height: 2000px;
 }
-    
+
+.conteudo p{
+    font-size: 30px;
+    text-align: center;
+}
+   
+.picture_animation {    
+    height: 35%;    
+    background-image: url("images/manutencao.jpg");     
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 section.content {
     margin-top: 60px;    
@@ -39,8 +54,14 @@ section.content {
     height: 40px;
     background: gold;
     clear: both;
+    text-align: center;    
+}
+
+rodade p a{
+    margin: auto;
 }
 
 #checker_box img{
     margin-left: 800px;    
 }
+
