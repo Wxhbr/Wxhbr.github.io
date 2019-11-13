@@ -11,7 +11,7 @@ header{
     left: 0;
     top: 0;
     width: 100%;
-    padding: 9px 0;
+    padding: 10px 0;
     text-align: center;
     background: #069;    
 }
@@ -28,11 +28,11 @@ header a{
 
 .conteudo{
     height: 2000px;
-    background: green;
 }
+    
 
 section.content {
-    margin-top: 40px;    
+    margin-top: 60px;    
 }
 
 .rodape {    
