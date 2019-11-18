@@ -40,15 +40,96 @@ section.content {
     text-align: center;    
 }
 
-rodade p a{
+.rodade p a{
     margin: auto;
 }
 
+.Table_center {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 2%;
+    
+}
+
 .Tabela_Tier_List, th, td {
-    border: 1px solid black;
+    border: 1px solid black;    
 }
 
 .Tabela_Tier_List th {
     padding: 20px;
+    background-color: rgb(112, 186, 235);
+}
+
+.Tabela_Tier_List td {    
+    text-align: center;
+}
+
+.Th_Color1 {
+    color: black;
+}
+
+.Th_Color2 {
+    color: rgb(241, 87, 221);
+}
+
+.Th_Color3 {
+    color: rgb(137, 7, 197);
+}
+
+.Th_Color4 {
+    color: rgb(194, 5, 30);
+}
+
+.Th_Legenda span{
+    font-size: 0.7em;
+    padding:0 20px;
+}
+
+.Legenda_Color1 {
+    color: rgb(226, 223, 29);
+}
+
+.Legenda_Color2 {
+    color: rgb(10, 175, 5);
+}
+
+.Legenda_Color3 {
+    color: rgb(18, 114, 5);
+}
+
+.Legenda_Color4 {
+    color: rgb(156, 37, 21);
+}
+
+.Legenda_Color5 {
+    color: rgb(58, 8, 2);
+}
+
+.bLegenda_Color0 {
+    background-color: rgb(112, 186, 235);
+}
+
+.bLegenda_Color1 {
+    background-color: rgb(226, 223, 29);
+}
+
+.bLegenda_Color2 {
+    background-color: rgb(10, 175, 5);
+}
+
+.bLegenda_Color3 {
+    background-color: rgb(18, 114, 5);
+}
+
+.bLegenda_Color4 {
+    background-color: rgb(156, 37, 21);
+}
+
+.bLegenda_Color5 {
+    background-color: rgb(58, 8, 2);
+}
+
+.Table_text_color1 {
+    color: white;
 }
 
