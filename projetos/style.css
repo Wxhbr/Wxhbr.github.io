@@ -29,23 +29,6 @@ header a{
     color: white;
 }
 
-.conteudo{
-    height: 2000px;
-}
-
-.conteudo p{
-    font-size: 30px;
-    text-align: center;
-}
-   
-.picture_animation {    
-    height: 35%;    
-    background-image: url("images/manutencao.jpg");     
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 section.content {
     margin-top: 60px;    
 }
@@ -61,7 +44,11 @@ rodade p a{
     margin: auto;
 }
 
-#checker_box img{
-    margin-left: 800px;    
+.Tabela_Tier_List, th, td {
+    border: 1px solid black;
+}
+
+.Tabela_Tier_List th {
+    padding: 20px;
 }
 
