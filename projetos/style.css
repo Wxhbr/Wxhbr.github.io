@@ -48,6 +48,11 @@ header a{
     padding: 20px;
 }
 
+.h1_content {
+    font-size: 2.5em;
+    padding: 20px;
+}
+
 .p_content {
     text-align: left;
     padding:40px 0px
@@ -84,10 +89,13 @@ header a{
 }
 
 #Name_Tier_List {
-    color: white;
+    background-color: rgb(112, 186, 235); 
     text-align: center;
     font-size: 1em;
+    margin:20px auto;
     padding-bottom: 2%;
+    width: 400px;
+    height: 40px;    
 }
 
 .Table_center {
@@ -178,9 +186,15 @@ header a{
     color: white;
 }
 
-#Saori {
-    background-color: rgb(187, 223, 230);   
-    margin-left: 810px;
+#img_exclam-Athena {
+    background-color: rgb(187, 223, 230);     
     width: 250px;
+}
+
+#img_footer {
+    background-color: yellow;
+    width: 250px;
+    height: 188px;
+    margin-left: 810px;
 }
 
