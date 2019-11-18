@@ -8,15 +8,19 @@
 body {
     font-size: 20px;
     font-family:'Times New Roman', Times, serif;
+    background-image: url(images/Background-Constellation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;    
 }
 header{
+    font-size: 1.5em;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     padding: 10px 0;
-    text-align: center;
-    background: #069;    
+    text-align: center; 
+    background-color: black;     
 }
 
 header li{
@@ -33,15 +37,41 @@ section.content {
     margin-top: 60px;    
 }
 
-.rodape {    
-    height: 40px;
-    background: gold;
-    clear: both;
-    text-align: center;    
+.rodape {  
+    padding: 1%;  
+    height: auto;
+    background-color: rgb(187, 223, 230);    
+    clear: both;      
 }
 
-.rodade p a{
-    margin: auto;
+.rodape ol {    
+    color: rgb(0, 0, 0);
+    padding-left: 2%;
+}
+
+.rodape ol li {
+    padding-bottom: 1%;    
+}
+
+#Link_Ref {
+    font-size: 1.5em;
+    padding:0 0% 1% 1%; 
+    color: rgb(0, 0, 0);
+}
+
+#Voltar_Topo {       
+    text-align: center;
+}
+
+#Footer_Content_imgTopo {
+    margin-top: -220px;
+}
+
+#Name_Tier_List {
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    padding-bottom: 2%;
 }
 
 .Table_center {
@@ -131,5 +161,11 @@ section.content {
 
 .Table_text_color1 {
     color: white;
+}
+
+#Saori {
+    background-color: rgb(187, 223, 230);   
+    margin-left: 810px;
+    width: 250px;
 }
 
