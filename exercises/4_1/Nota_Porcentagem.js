@@ -1,4 +1,4 @@
-let porcentagem = 101;
+let porcentagem = 89;
 
 function ConvertPorcentagem (porcentagemNota){
 
