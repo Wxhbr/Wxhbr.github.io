@@ -35,5 +35,4 @@ function irAliquota (SalarioBruto){
     return (0);
 }
 
-console.log(inssAliquota(salario), irAliquota(salario));
-console.log("O salario liquido a ser recebido será de : " + salarioLiquido(salario, inssAliquota(salario), irAliquota(salario)));
+console.log("O salario liquido a ser recebido será de : " + (salarioLiquido(salario, inssAliquota(salario), irAliquota(salario))).toFixed(2));
