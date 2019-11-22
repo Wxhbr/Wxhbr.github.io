@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 3.4</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+
+     function addFilho (filhoTag, paiTag, paiIndice){
+      var h1 = document.createElement(filhoTag);
+      var addTag = document.getElementsByTagName(paiTag)[paiIndice].appendChild(h1);
+      return addTag;
+     }
+     
+     function addFilhoPorClass (filhoTag, paiTag, paiIndice){
+      var h1 = document.createElement(filhoTag);
+      var addTag = document.getElementsByClassName(paiTag)[paiIndice].appendChild(h1);
+      return addTag;
+     }
+    
+     var tagH1 = addFilho("h1", "body", 0);
+     tagH1.classList.add("title");
+     tagH1.innerHTML = "Exercício 3.4 - JavaScript DOM";
+
+     addFilho("div", "body", 0).classList.add("main-content");
+     
+     var tagDivCenterContent = addFilho("div", "div", 0);
+     tagDivCenterContent.innerHTML = "TESTE DIV CENTER CONTENT";
+     tagDivCenterContent.classList.add("center-content");
+     tagDivCenterContent.style.backgroundColor = "green";
+
+     addFilho("p", "div", 0).innerHTML = "Paragrafo criado na primeira div";
+     addFilho("div", "div", 0).classList.add("left-content");
+     
+     var tagDivRightContent = addFilho("div", "div", 0);
+     tagDivRightContent.classList.add("right-content");
+     tagDivRightContent.style.marginRight = "auto";
+     
+    
+    //---------------------------ADD IMAGEM---------------------------------------------
+
+     var div_left_content = addFilhoPorClass("img", "left-content", 0);
+     div_left_content.classList.add("small-image");
+     div_left_content.src = "https://picsum.photos/200";
+     
+     
+    //---------------------------ADD LISTA---------------------------------------------
+     var div_right_content = addFilhoPorClass("ul", "right-content", 0);
+     var lista = document.createElement("li");
+     for (i=1;i<=10;i++){
+       var lista = document.createElement("li");
+       lista.appendChild(document.createTextNode(i));
+       div_right_content.appendChild(lista);   
+     }     
+     
+    //---------------------------ADD H3---------------------------------------------
+     
+     for (i=0;i<3;i++){
+        var h3 = document.createElement("h3");
+        h3.classList.add("description");
+        document.getElementsByTagName("div")[0].appendChild(h3);
+     }
+     
+    //---------------------------REMOVER---------------------------------------------
+     
+     var removeLeftContent = document.querySelector(".main-content");
+     removeLeftContent.removeChild(removeLeftContent.childNodes[1]);
+
+     var removeLista = document.getElementsByTagName("ul")[0];
+     removeLista.removeChild(removeLista.childNodes[9]);
+     removeLista.removeChild(removeLista.childNodes[8]);
+
+    //---------------------------TESTES---------------------------------------------
+    
+     console.log(document.getElementsByTagName("ul")[0]);
+     console.log(document.getElementsByTagName("body")[0]);
+     console.log(document.getElementsByTagName("div")[0]);
+     console.log(document.getElementsByClassName("left-content")[0]);
+     console.log(document.getElementsByClassName("right-content")[0]);
+     
+    </script>
+  </body>
+</html>
