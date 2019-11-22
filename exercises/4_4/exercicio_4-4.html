@@ -56,6 +56,8 @@
   </head>
   <body>
     <script>
+    
+    //---------------------------FUNCAO PARA ADD FILHO A PARTIR DE UMA TAG---------------------------------------------
 
      function addFilho (filhoTag, paiTag, paiIndice){
       var h1 = document.createElement(filhoTag);
@@ -63,26 +65,42 @@
       return addTag;
      }
      
+    //---------------------------FUNCAO PARA ADD FILHO A PARTIR DE UMA CLASS---------------------------------------------
+
      function addFilhoPorClass (filhoTag, paiTag, paiIndice){
       var h1 = document.createElement(filhoTag);
       var addTag = document.getElementsByClassName(paiTag)[paiIndice].appendChild(h1);
       return addTag;
      }
     
+    //---------------------------ADD H1---------------------------------------------
+
      var tagH1 = addFilho("h1", "body", 0);
      tagH1.classList.add("title");
      tagH1.innerHTML = "Exercício 3.4 - JavaScript DOM";
+    
+    //---------------------------ADD DIV MAIN CONTENT---------------------------------------------
 
      addFilho("div", "body", 0).classList.add("main-content");
      
+    //---------------------------ADD DIV CENTER CONTENT---------------------------------------------
+    
+
      var tagDivCenterContent = addFilho("div", "div", 0);
      tagDivCenterContent.innerHTML = "TESTE DIV CENTER CONTENT";
      tagDivCenterContent.classList.add("center-content");
      tagDivCenterContent.style.backgroundColor = "green";
 
+    //---------------------------ADD P NA DIV MAIN CONTENT---------------------------------------------
+    
      addFilho("p", "div", 0).innerHTML = "Paragrafo criado na primeira div";
+    
+    //---------------------------DIV LEFT CONTENT---------------------------------------------
+
      addFilho("div", "div", 0).classList.add("left-content");
      
+    //---------------------------DIV RIGHT CONTENT---------------------------------------------
+
      var tagDivRightContent = addFilho("div", "div", 0);
      tagDivRightContent.classList.add("right-content");
      tagDivRightContent.style.marginRight = "auto";
