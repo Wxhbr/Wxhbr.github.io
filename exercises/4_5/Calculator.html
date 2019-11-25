@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+
+  <script>
+  window.onload = function () {
+
+    let squareButton = document.getElementById("square-button");
+    let squareText = document.getElementById("square-input")
+    squareButton.addEventListener('click', squareNumber);
+    squareText.addEventListener('keypress', squareNumber);
+    
+    
+    let halfButton = document.getElementById("half-button");
+    let halfText = document.getElementById("half-input")
+    halfButton.addEventListener('click', halfNumber);
+    halfText.addEventListener('keypress', halfNumber);
+    
+    
+    let fractionButton = document.getElementById("percent-button");
+    let percent1Text = document.getElementById("percent1-input");
+    let percent2Text = document.getElementById("percent2-input");
+    fractionButton.addEventListener('click', percentOf);
+    percent1Text.addEventListener('keypress', percentOf);
+    percent2Text.addEventListener('keypress', percentOf);
+        
+    
+    let circleRadiusButton = document.getElementById("area-button");
+    let circleRadiusText = document.getElementById("area-input")
+    circleRadiusButton.addEventListener('click', areaOfCircle);
+    circleRadiusText.addEventListener('keypress', areaOfCircle);
+    
+  }  
+  
+  function squareNumber (){
+    number = document.getElementById("square-input").value;
+    return document.getElementById("solution").innerHTML = (number * number);
+  }
+
+  function halfNumber (){
+    number = document.getElementById("half-input").value;
+    return document.getElementById("solution").innerHTML = (number/2);
+  }
+
+  function percentOf (){
+    number1 = document.getElementById("percent1-input").value;
+    number2 = document.getElementById("percent2-input").value;
+
+    return document.getElementById("solution").innerHTML = Math.round(number1/number2*100);
+  }
+
+  function areaOfCircle (){
+    radius = document.getElementById("area-input").value;
+
+    return document.getElementById("solution").innerHTML = Math.round(Math.PI * (radius * radius));
+  }
+  
+  
+  </script>
+</body>
+</html>
