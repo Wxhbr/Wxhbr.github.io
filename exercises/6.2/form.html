@@ -5,102 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="DatePickerX.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="DatePickerX.min.css" type="text/css">
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
 </head>
 <body>
-    <form action="">
-        <div class="form_content">
-            <div class="form_content_fieldsets">
-                <fieldset>
-                    <legend>Dados Pessoais: </legend>
-                    <div class="input_content">
-                        <label>Name:</label>
-                        <input type="text"
-                               placeholder="Digite seu Nome"
-                               class="input" name="nome"
-                               required="required"
-                               maxlength="40"
-                        ><br>   
-                    </div>
-                    <div class="input_content">
-                        <label>Email:</label>
-                        <input type="text"
-                               placeholder="Digite seu Email"
-                               class="input validate"
-                               name="Email"
-                               required="required"
-                               maxlength="50"
-                        ><br>   
-                    </div>
-                    <div class="input_content">
-                        <label>CPF:</label>
-                        <input  type="text"
-                                placeholder="Digite seu CPF"
-                                class="input"
-                                name="cpf"
-                                required="required"
-                                maxlength="11"
-                            ><br>  
-                    </div>
-                    <div class="input_content">
-                        <label>Endereco:</label>
-                        <input  type="text"
-                                placeholder="Digite seu Endereço"
-                                class="input"
-                                name="endereco"
-                                required="required"
-                                maxlength="200"
-                        ><br>
-                    </div>
-                    <div class="input_content">
-                        <label>Cidade:</label>
-                        <input  type="text"
-                                placeholder="Digite sua Cidade"
-                                class="input"
-                                name="cidade"
-                                required="required"
-                                maxlength="28"
-                        ><br>
-                    </div>
-                    <div class="input_content">
-                        <label>Estado:</label>
-                        <select required="required"
-                                name="estado">
-                        </select><br> 
-                    </div>
-                    <div class="input_content">
-                        <label>Tipo:</label>
-                        <label for="casa"><input type="radio"
-                               class="input"
-                               id="casa"
-                               name="moradia"
-                               value="casa"
-                               >Casa
-                        </label>
-                        <label for="apartamento"><input type="radio"
-                               class="input"
-                               id="apartamento"
-                               name="moradia"
-                               value="ap"
-                               >Apartamento
-                        </label><br>
-                    </div>
-                </fieldset>
+    <form action="">                       
+        <div class="form-group">
+            <label class="">Nome:</label>
+            <input type="text"
+                    placeholder="Digite seu Nome"
+                    class="input form-control" name="nome"
+                    required="required"
+                    maxlength="40"
+            ><br>   
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Email:</label>
+                <input type="text"
+                        placeholder="Digite seu Email"
+                        class="input validate form-control"
+                        name="Email"
+                        required="required"
+                        maxlength="50"
+                ><br>   
             </div>
-            <div class="form_content_fieldsets">
-                <fieldset>
-                    <legend>Dados Profissionais:</legend>
-                    <label for="">Resumo do Curriculo:</label><br>
-                    <textarea name="resumo" required="required" cols="30" rows="5" placeholder="Resumo Curriculo"></textarea><br>
-                    Cargo: <input type="text" placeholder="Digite seu Cargo" class="input" name="cargo" required="required" maxlength="40"><br>
-                    Descrição do Cargo: <input type="text" placeholder="Digite a Descrição" class="input" name="descricao" required="required" maxlength="500"><br>
-                    Data de início: <input type="text" placeholder="dd/mm/aaaa" class="input validate" name="data" required="required" maxlength="40"><br>
-                    Cargo: <input type="text" placeholder="Digite seu Cargo" class="input" name="cargo" required="required" maxlength="40"><br>
-                </fieldset>
+            <div class="form-group col-md-6">
+                <label>CPF:</label>
+                <input  type="text"
+                        placeholder="Digite seu CPF"
+                        class="input form-control"
+                        name="cpf"
+                        required="required"
+                        maxlength="11"
+                    ><br>  
             </div>
         </div>
+        <div class="form-group">
+            <label>Endereco:</label>
+            <input  type="text"
+                    placeholder="Digite seu Endereço"
+                    class="input form-control"
+                    name="endereco"
+                    required="required"
+                    maxlength="200"
+            ><br>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Cidade:</label>
+                <input  type="text"
+                        placeholder="Digite sua Cidade"
+                        class="input form-control"
+                        name="cidade"
+                        required="required"
+                        maxlength="28"
+                ><br>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Estado:</label>
+                <select required="required"
+                        name="estado"
+                        class="form-control">
+                </select><br> 
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-1 pt-0">Tipo:</legend>
+                <div class="form-check-inline">
+                    <div class="form-check">
+                    <input type="radio"
+                        class="input form-check-input"
+                        id="casa"
+                        name="moradia"
+                        value="casa"
+                        ><label class="form-check-label" for="casa">Casa</label>  
+                    </div>
+                    <div class="form-check">
+                        <input type="radio"
+                        class="input form-check-input"
+                        id="apartamento"
+                        name="moradia"
+                        value="ap">
+                        <label class="form-check-label" for="apartamento">Apartamento</label><br> 
+                    </div>
+                </div>   
+            </div>
+        </div>        
+        <div class="form-group">
+            <label>Resumo do Curriculo:</label><br>
+            <textarea name="resumo"
+                      required="required"
+                      cols="30"
+                      rows="5"
+                      placeholder="Resumo Curriculo"
+                      class="form-control"
+                      >
+            </textarea><br>
+        </div>
+        <div class="form-group">
+            <label>Cargo:</label><br>
+            <input type="text"
+                   placeholder="Digite seu Cargo"
+                   class="input form-control"
+                   name="cargo"
+                   required="required"
+                   maxlength="40"
+            ><br>
+        </div>
+        <div class="form-group">
+            <label>Descrição do Cargo:</label><br>
+            <input type="text"
+                   placeholder="Digite a Descrição"
+                   class="input form-control"
+                   name="descricao"
+                   required="required"
+                   maxlength="500"
+            ><br>
+        </div>
+        <div class="form-group">
+            <label>Data de início:</label><br>
+            <input type="text"
+                   placeholder="dd/mm/aaaa"
+                   class="input data"
+                   name="data"
+                   required="required"
+                   maxlength="40"
+            ><br>
+        </div>
+        <div class="btn-toolbar">
+          <div class="mr-2">
+            <button class="btn btn-primary" type="submit">Submit</button><br>    
+          </div>
+          <div class="mr-2" role="group" aria-label="Third group">
+            <button class="btn btn-primary" type="button">Limpar</button><br>   
+          </div>
+        </div>
     </form>
-    <button class="btn" type="submit">Submit</button><br>    
-    <button class="btn" type="button">Limpar</button><br>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

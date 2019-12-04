@@ -26,6 +26,7 @@ function startingEvents() {
 }
 
 window.onload = function load() {
+  document.querySelector('.data').DatePickerX.init({format:'dd/mm/yyyy'});
   document.querySelector('.btn').addEventListener('click', prevent);
   document.querySelector('.btn').addEventListener('click', validate);
 }
