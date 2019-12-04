@@ -14,6 +14,9 @@ function validate(event) {
   });
 }
 
+function criarDiv() {   
+}
+
 
 
 function startingEvents() {
