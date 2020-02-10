@@ -1,0 +1,9 @@
+.dropdown-inferior {  
+  margin-top: 70px;  
+}
+
+.dropdown {
+  text-align: center;
+  width: 10%;
+  border: solid 1px black;
+}
