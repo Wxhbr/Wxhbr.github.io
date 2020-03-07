@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import swPlanets from './swPlanets';
+import data from './swPlanets';
 
 const rootReducer = combineReducers({
-  swPlanets,
+  data,
 });
 
 export default rootReducer;

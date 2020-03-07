@@ -8,7 +8,7 @@ const INITIAL_SW_PLANETS_STATE = {
   isFetching: true,
 };
 
-const swPlanets = (state = INITIAL_SW_PLANETS_STATE, action) => {
+const data = (state = INITIAL_SW_PLANETS_STATE, action) => {
   switch (action.type) {
     case REQUEST_SW_PLANETS:
       return {
@@ -32,4 +32,4 @@ const swPlanets = (state = INITIAL_SW_PLANETS_STATE, action) => {
   }
 };
 
-export default swPlanets;
+export default data;

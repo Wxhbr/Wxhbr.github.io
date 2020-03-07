@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './Table.css';
 
@@ -62,7 +62,7 @@ class Table extends Component {
 }
 
 const mapStateToProps = ({
-  swPlanets: {
+  data: {
     isFetching,
     results,
   },
