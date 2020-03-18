@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-const PlanetList = ({ filterResults, filters }) => {
+const PlanetList = ({ filterResults }) => {
   function tableTHead() {
     return (
       <thead>
@@ -25,7 +25,7 @@ const PlanetList = ({ filterResults, filters }) => {
   function tableTBody() {
     const residentsIndex = Object.keys(filterResults[0] || []).findIndex((element) => element === 'residents');
     // console.log(filterResults);
-    //console.log(filters);
+    // console.log(filters);
 
     return (
       filterResults.map((value) => (

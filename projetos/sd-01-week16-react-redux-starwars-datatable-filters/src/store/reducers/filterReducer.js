@@ -28,7 +28,7 @@ const filterReducer = (state = INITIAL_STATE_FILTER_REDUCER, action) => {
         filterResults: action.filterResults,
       };
     case FILTER_RESULTS_BY_NAME: {
-      const [, ...rest] = state.filters;
+      const [, ...rest] = action.filters;
       return {
         ...state,
         filterResults: action.filterResults,

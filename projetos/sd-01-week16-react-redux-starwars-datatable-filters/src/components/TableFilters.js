@@ -2,6 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { filterByName, filterByColumn } from '../store/actions/filterAction';
+import FilterBox from './FilterBox';
 
 class TableFIlters extends React.Component {
   constructor(props) {
@@ -57,6 +58,12 @@ class TableFIlters extends React.Component {
 
   selectColumn() {
     const { dropdownColumn, column } = this.state;
+    const { filters } = this.props;
+    const [, ...rest] = filters;
+    const newDropDownColumn = dropdownColumn.filter((dropdown) => (
+      !rest.map(({ numericValues }) => numericValues.column).includes(dropdown)
+    ));
+
     return (
       <select
         value={column}
@@ -64,10 +71,12 @@ class TableFIlters extends React.Component {
         onChange={({ target: { value, name } }) => this.onHandleChangeSelecting(value, name)}
       >
         <option value="" disabled>Escolha uma coluna</option>
-        {dropdownColumn.map((dropdown) => (
-          <option key={dropdown} value={dropdown}>{dropdown}</option>
-        ))}
-      </select>
+        {
+          newDropDownColumn.map((dropdown) => (
+            <option key={dropdown} value={dropdown}>{dropdown}</option>
+          ))
+        }
+      </select >
     );
   }
 
@@ -114,6 +123,9 @@ class TableFIlters extends React.Component {
 
   render() {
     const { column, comparison, value } = this.state;
+    const { filters, filterResults } = this.props;
+    //console.log(filterResults);
+    //console.log(filters);
     if (column && comparison && value) {
       return (
         <div>
@@ -122,6 +134,7 @@ class TableFIlters extends React.Component {
           {this.selectComparison()}
           {this.inputNumber()}
           {this.filterButton()}
+          <FilterBox />
         </div>
       );
     }
@@ -131,6 +144,7 @@ class TableFIlters extends React.Component {
         {this.selectColumn()}
         {this.selectComparison()}
         {this.inputNumber()}
+        <FilterBox />
       </div>
     );
   }
