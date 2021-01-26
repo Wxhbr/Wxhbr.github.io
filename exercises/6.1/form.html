@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div class="form_content">
+            <div class="form_content_fieldsets">
+                <fieldset>
+                    <legend>Dados Pessoais: </legend>
+                    <div class="input_content">
+                        <label>Name:</label>
+                        <input type="text"
+                               placeholder="Digite seu Nome"
+                               class="input" name="nome"
+                               required="required"
+                               maxlength="40"
+                        ><br>   
+                    </div>
+                    <div class="input_content">
+                        <label>Email:</label>
+                        <input type="text"
+                               placeholder="Digite seu Email"
+                               class="input validate"
+                               name="Email"
+                               required="required"
+                               maxlength="50"
+                        ><br>   
+                    </div>
+                    <div class="input_content">
+                        <label>CPF:</label>
+                        <input  type="text"
+                                placeholder="Digite seu CPF"
+                                class="input"
+                                name="cpf"
+                                required="required"
+                                maxlength="11"
+                            ><br>  
+                    </div>
+                    <div class="input_content">
+                        <label>Endereco:</label>
+                        <input  type="text"
+                                placeholder="Digite seu Endereço"
+                                class="input"
+                                name="endereco"
+                                required="required"
+                                maxlength="200"
+                        ><br>
+                    </div>
+                    <div class="input_content">
+                        <label>Cidade:</label>
+                        <input  type="text"
+                                placeholder="Digite sua Cidade"
+                                class="input"
+                                name="cidade"
+                                required="required"
+                                maxlength="28"
+                        ><br>
+                    </div>
+                    <div class="input_content">
+                        <label>Estado:</label>
+                        <select required="required"
+                                name="estado">
+                        </select><br> 
+                    </div>
+                    <div class="input_content">
+                        <label>Tipo:</label>
+                        <label for="casa"><input type="radio"
+                               class="input"
+                               id="casa"
+                               name="moradia"
+                               value="casa"
+                               >Casa
+                        </label>
+                        <label for="apartamento"><input type="radio"
+                               class="input"
+                               id="apartamento"
+                               name="moradia"
+                               value="ap"
+                               >Apartamento
+                        </label><br>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form_content_fieldsets">
+                <fieldset>
+                    <legend>Dados Profissionais:</legend>
+                    <label for="">Resumo do Curriculo:</label><br>
+                    <textarea name="resumo" required="required" cols="30" rows="5" placeholder="Resumo Curriculo"></textarea><br>
+                    Cargo: <input type="text" placeholder="Digite seu Cargo" class="input" name="cargo" required="required" maxlength="40"><br>
+                    Descrição do Cargo: <input type="text" placeholder="Digite a Descrição" class="input" name="descricao" required="required" maxlength="500"><br>
+                    Data de início: <input type="text" placeholder="dd/mm/aaaa" class="input validate" name="data" required="required" maxlength="40"><br>
+                    Cargo: <input type="text" placeholder="Digite seu Cargo" class="input" name="cargo" required="required" maxlength="40"><br>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+    <button class="btn" type="submit">Submit</button><br>    
+    <button class="btn" type="button">Limpar</button><br>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
